@@ -179,9 +179,72 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tipo__texto p { font-size: clamp(1.1rem, 2.2vw, 1.4rem); line-height: 1.8; }
 
 @media (max-width: 760px) {
-  .tipos { padding: 6rem 1rem 3rem; }
-  .tipos__titulo { min-height: 30vh; }
-  .tipo { grid-template-columns: 1fr; min-height: auto; gap: 1.5rem; padding: 2.5rem 0; }
+  .tipos { padding: 5.5rem 1rem 2rem; }
+  .tipos__titulo { min-height: 25vh; font-size: clamp(1.8rem, 8vw, 2.4rem); }
+  .tipo { grid-template-columns: 1fr; min-height: auto; gap: 1rem; padding: 1.75rem 0; }
   .tipo--inv .tipo__img { order: 0; }
-  .tipo__texto, .tipo--inv .tipo__texto { padding: 1.4rem; border-radius: 20px 20px 20px 48px; border-left: 6px solid var(--rosa); border-right: 1px solid rgba(255, 255, 255, .18); }
+
+  .tipo__img img {
+    width: 82%;
+    margin: 0 auto;
+    aspect-ratio: 16 / 10;
+    border-radius: 18px 18px 18px 48px;
+  }
+  .tipo--inv .tipo__img img { border-radius: 18px 18px 48px 18px; }
+
+  .tipo__texto, .tipo--inv .tipo__texto {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 1.2rem;
+    border-radius: 18px 18px 18px 40px;
+    border-left: 5px solid var(--rosa);
+    border-right: 1px solid rgba(255, 255, 255, .18);
+  }
+  .tipo__texto h3 { font-size: 1.4rem; margin-bottom: .4rem; }
+  .tipo__texto p { font-size: 1rem; line-height: 1.6; }
 }
+
+
+
+
+
+
+@media (max-width: 760px) {
+  .sec { padding: 5.5rem 1rem 2.5rem; }
+  .sec__wrap { gap: 1.25rem; }
+  .sec h2 { font-size: clamp(1.7rem, 8vw, 2.2rem); }
+
+  .texto, .tarjeta, .tarjeta--nr {
+    width: 100%;
+    padding: 1.1rem 1.2rem 1.4rem;
+    border-radius: 18px 18px 18px 28px;
+    overflow-wrap: anywhere;
+  }
+  .texto { font-size: 1rem; line-height: 1.65; border-left-width: 5px; }
+
+  .tarjetas { gap: 1rem; }
+  .tarjeta span { font-size: 1.7rem; margin-bottom: .3rem; }
+  .tarjeta h3 { font-size: 1.25rem; margin-bottom: .3rem; }
+  .tarjeta p { font-size: 1rem; line-height: 1.6; }
+  .tarjeta--r, .tarjeta--nr { border-top-width: 5px; }
+
+  .hero__glass { padding: 1.5rem 1.1rem; border-radius: 22px; }
+  .cta { padding: 3rem 1rem; }
+}
+
+/* Al ser visible, siempre vuelve a su posición (gana a las reglas de celular) */
+.js .reveal.from-left.is-visible,
+.js .reveal.from-right.is-visible,
+.js .reveal.from-up.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+.sec--solucion {
+  background:
+    linear-gradient(160deg, rgba(139, 99, 155, .82), rgba(64, 61, 136, .82)),
+    url('img/academico2.png') center / min(80vw, 560px) no-repeat,
+    var(--indigo);
+}
+
