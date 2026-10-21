@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoVolt | ODS 7 Energía asequible y no contaminante</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="top-bar">
+    <a href="#inicio" class="logo-link"><img src="img/academico2.png" alt="Logo" class="logo-colegio"></a>
+    <span class="top-title">Colegio Académico El Poblado</span>
+    <a href="propuesta.html" class="top-link">Propuesta</a>
+  </div>
+
+  <header class="hero" id="inicio">
+    <div class="hero__glass">
+      <h1>☀️ EcoVolt: Energía para el futuro</h1>
+      <p class="hero__sub">¡La energía mueve el mundo, cuidarla es nuestra misión!</p>
+      <a href="#que-es-energia" class="btn">Descubre más</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="sec sec--noche" id="que-es-energia">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">¿Qué es la energía?</h2>
+        <p class="texto reveal from-left">La energía es la capacidad de producir <strong>cambios</strong> y hacer que las cosas funcionen. La utilizamos para encender luces, cocinar y cargar celulares. También es necesaria para muchas actividades de nuestra vida cotidiana.</p>
+      </div>
+    </section>
+
+    <section class="sec sec--indigo" id="importancia">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">¿Por qué es importante?</h2>
+        <p class="texto reveal from-right">La energía nos permite <strong>estudiar, comunicarnos, transportarnos</strong> y utilizar electrodomésticos. También es necesaria en hospitales, colegios y fábricas. Por eso debemos utilizarla responsablemente y evitar desperdiciarla.</p>
+      </div>
+    </section>
+
+    <section class="sec sec--video" id="video">
+      <h2 class="reveal from-up" style="margin-bottom:2rem">¡Veámoslo!</h2>
+      <div class="video-container reveal from-up">
+        <iframe src="https://www.youtube.com/embed/IH_5FaFDgho" title="Video ODS 7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="sec sec--morado" id="tipos">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">Tipos de energía</h2>
+        <div class="tarjetas">
+          <article class="tarjeta reveal from-left"><span>☀️</span><h3>Solar</h3><p>Proviene de la luz del Sol.</p></article>
+          <article class="tarjeta reveal from-right"><span>💨</span><h3>Eólica</h3><p>Aprovecha la fuerza del viento.</p></article>
+          <article class="tarjeta reveal from-left"><span>💧</span><h3>Hidroeléctrica</h3><p>Utiliza el movimiento del agua.</p></article>
+          <article class="tarjeta reveal from-right"><span>⚡</span><h3>Eléctrica</h3><p>Permite que funcionen muchos aparatos.</p></article>
+          <article class="tarjeta reveal from-left"><span>🔥</span><h3>Térmica</h3><p>Está relacionada con el calor.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--noche" id="renovables">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">Renovable y no renovable</h2>
+        <div class="tarjetas">
+          <article class="tarjeta tarjeta--r reveal from-left">
+            <h3>¿Qué es la energía renovable?</h3>
+            <p>Es la energía que proviene de fuentes naturales que se renuevan, como el Sol, el viento y el agua. Estas fuentes permiten producir energía con menos emisiones contaminantes y ayudan a cuidar el medioambiente.</p>
+          </article>
+          <article class="tarjeta tarjeta--nr reveal from-right">
+            <h3>¿Qué es la energía no renovable?</h3>
+            <p>Proviene de recursos limitados que tardan millones de años en formarse. Algunos ejemplos son el petróleo, el carbón y el gas natural. Su utilización puede producir contaminación y contribuir al cambio climático.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec sec--indigo" id="ods7">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">¿Qué es el ODS 7?</h2>
+        <p class="texto reveal from-left">El ODS 7 es uno de los Objetivos de Desarrollo Sostenible de la ONU. Busca garantizar que todas las personas tengan acceso a una energía <strong>asequible, fiable, sostenible y moderna</strong>. También promueve las energías limpias.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="registro">
+    <div class="footer__inner">
+      <h2>Súmate al cambio</h2>
+      <form id="formRegistro" novalidate>
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" minlength="3" maxlength="25" required autocomplete="off">
+          <small class="hint">Mínimo 3 y máximo 25 caracteres</small>
+          <small class="error" data-for="nombre"></small>
+        </div>
+        <div class="field">
+          <label for="documento">Documento</label>
+          <input type="text" id="documento" name="documento" inputmode="numeric" maxlength="10" required autocomplete="off">
+          <small class="hint">Exactamente 10 dígitos</small>
+          <small class="error" data-for="documento"></small>
+        </div>
+        <div class="field">
+          <label for="grado">Grado</label>
+          <select id="grado" name="grado" required>
+            <option value="">Seleccione su grado</option>
+            <option value="Sexto">Sexto</option>
+            <option value="Septimo">Septimo</option>
+            <option value="Octavo">Octavo</option>
+            <option value="Noveno">Noveno</option>
+            <option value="Decimo">Decimo</option>
+            <option value="Once">Once</option>
+          </select>
+          <small class="error" data-for="grado"></small>
+        </div>
+        <div class="field">
+          <label for="telefono">Teléfono</label>
+          <input type="text" id="telefono" name="telefono" inputmode="numeric" maxlength="10" required autocomplete="off">
+          <small class="hint">Exactamente 10 dígitos</small>
+          <small class="error" data-for="telefono"></small>
+        </div>
+        <button type="submit" class="btn btn--submit">Enviar</button>
+        <p id="estado" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </footer>
+
+  <div class="sub-footer">
+    <p>Colegio Académico El Poblado</p>
+    <p>Emily López Muñoz</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
