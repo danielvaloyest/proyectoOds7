@@ -69,7 +69,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .hero--corto {
   min-height: 100vh; min-height: 100svh;
   background:
-    linear-gradient(rgba(97, 56, 97, 0.76), rgba(83, 58, 58, 0.767)),
+    linear-gradient(rgba(73, 24, 73, 0.76), rgba(85, 28, 66, 0.767)),
     url('img/panel.jpg') center/cover no-repeat;
 }
 .hero--corto .hero__glass { background: rgba(64, 61, 136, .35); }
@@ -248,3 +248,42 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     var(--indigo);
 }
 
+.tarjeta {
+  background: rgba(43, 41, 99, .55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+
+/* Prototipo: entrada con zoom y pasos que "se encienden" */
+.js .reveal.from-zoom { transform: scale(.8); }
+.js .reveal.from-zoom.is-visible { opacity: 1; transform: none; }
+
+.proto-pasos { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 2.5rem 1.5rem; margin-top: .75rem; }
+.paso { position: relative; padding: 2.4rem 1.5rem 1.6rem; text-align: center; background: rgba(255, 255, 255, .08); border: 1px solid rgba(255, 255, 255, .18); border-radius: 24px; box-shadow: 0 16px 30px rgba(0, 0, 0, .22); }
+.paso h3 { font-size: 1.5rem; color: var(--rosa); margin-bottom: .4rem; }
+.paso__n {
+  position: absolute; top: -24px; left: 50%; margin-left: -24px; width: 48px; height: 48px;
+  display: grid; place-items: center; border-radius: 50%;
+  background: var(--rosa); color: var(--noche); font-family: var(--titulos); font-size: 1.4rem;
+  box-shadow: 0 0 0 rgba(248, 178, 178, 0); transition: box-shadow .9s ease .5s;
+}
+.paso.is-visible .paso__n { box-shadow: 0 0 24px 8px rgba(248, 178, 178, .6); }
+
+.proto-viable { text-align: center; }
+.proto-viable__t { font-weight: 700; margin-bottom: 1rem; }
+.proto-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem; margin-bottom: 1.5rem; }
+.proto-chips span { padding: .55rem 1.2rem; border: 2px solid var(--rosa); border-radius: 999px; background: rgba(248, 178, 178, .12); font-weight: 600; }
+.proto-cierre { max-width: 640px; margin: 0 auto; padding: 1.1rem 1.4rem; background: rgba(255, 255, 255, .08); border-left: 6px solid var(--rosa); border-radius: 16px; font-size: 1.1rem; }
+
+@media (max-width: 760px) {
+  .proto-pasos { gap: 2.2rem; }
+  .paso { padding: 2.1rem 1.2rem 1.2rem; }
+  .paso h3 { font-size: 1.25rem; }
+  .proto-chips span { font-size: .9rem; padding: .45rem .9rem; }
+  .proto-cierre { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal.from-zoom { transform: none; }
+  .paso__n { transition: none; }
+}
