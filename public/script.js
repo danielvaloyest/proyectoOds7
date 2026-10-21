@@ -25,9 +25,15 @@ if (form) {
       if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]+$/.test(t)) return 'Solo letras y espacios';
       return '';
     },
-    documento: (v) => (/^\d{10}$/.test(v) ? '' : 'Debe tener exactamente 10 dígitos'),
+    
     grado: (v) => (v ? '' : 'Selecciona un grado'),
-    telefono: (v) => (/^\d{10}$/.test(v) ? '' : 'Debe tener exactamente 10 dígitos')
+    opinion: (v) => {
+      const t = v.trim();
+      if (t.length < 10) return 'Mínimo 10 caracteres';
+      if (t.length > 200) return 'Máximo 200 caracteres';
+      if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñÜü .,;:¡!¿?()\-\n]+$/.test(t)) return 'Usa solo letras y signos de puntuación básicos';
+      return '';
+    }
   };
 
   const mostrarError = (campo, msg) => {
@@ -35,11 +41,7 @@ if (form) {
     form.querySelector(`.error[data-for="${campo}"]`).textContent = msg;
   };
 
-  ['documento', 'telefono'].forEach((c) => {
-    form.elements[c].addEventListener('input', (e) => {
-      e.target.value = e.target.value.replace(/\D/g, '');
-    });
-  });
+
 
   Object.keys(reglas).forEach((c) => {
     form.elements[c].addEventListener('blur', () => mostrarError(c, reglas[c](form.elements[c].value)));
@@ -51,9 +53,8 @@ if (form) {
     estado.textContent = '';
     const datos = {
       nombre: form.elements.nombre.value.trim(),
-      documento: form.elements.documento.value.trim(),
       grado: form.elements.grado.value,
-      telefono: form.elements.telefono.value.trim()
+      opinion: form.elements.opinion.value.trim()
     };
 
     let valido = true;

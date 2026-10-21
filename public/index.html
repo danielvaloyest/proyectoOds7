@@ -30,6 +30,13 @@
       </div>
     </section>
 
+    <section class="sec sec--indigo" id="ods7">
+      <div class="sec__wrap">
+        <h2 class="reveal from-up">¿Qué es el ODS 7?</h2>
+        <p class="texto reveal from-left">El ODS 7 es uno de los Objetivos de Desarrollo Sostenible de la ONU. Busca garantizar que todas las personas tengan acceso a una energía <strong>asequible, fiable, sostenible y moderna</strong>. También promueve las energías limpias.</p>
+      </div>
+    </section>
+
     <section class="sec sec--indigo" id="importancia">
       <div class="sec__wrap">
         <h2 class="reveal from-up">¿Por qué es importante?</h2>
@@ -38,24 +45,40 @@
     </section>
 
     <section class="sec sec--video" id="video">
-      <h2 class="reveal from-up" style="margin-bottom:2rem">¡Veámoslo!</h2>
+      <h2 class="reveal from-up" style="margin-bottom:2rem">¡Vamos a verlo!</h2>
       <div class="video-container reveal from-up">
         <iframe src="https://www.youtube.com/embed/IH_5FaFDgho" title="Video ODS 7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </section>
 
-    <section class="sec sec--morado" id="tipos">
-      <div class="sec__wrap">
-        <h2 class="reveal from-up">Tipos de energía</h2>
-        <div class="tarjetas">
-          <article class="tarjeta reveal from-left"><span>☀️</span><h3>Solar</h3><p>Proviene de la luz del Sol.</p></article>
-          <article class="tarjeta reveal from-right"><span>💨</span><h3>Eólica</h3><p>Aprovecha la fuerza del viento.</p></article>
-          <article class="tarjeta reveal from-left"><span>💧</span><h3>Hidroeléctrica</h3><p>Utiliza el movimiento del agua.</p></article>
-          <article class="tarjeta reveal from-right"><span>⚡</span><h3>Eléctrica</h3><p>Permite que funcionen muchos aparatos.</p></article>
-          <article class="tarjeta reveal from-left"><span>🔥</span><h3>Térmica</h3><p>Está relacionada con el calor.</p></article>
-        </div>
-      </div>
-    </section>
+   <section class="tipos" id="tipos">
+  <h2 class="tipos__titulo reveal from-up">Tipos de energía</h2>
+
+  <article class="tipo">
+    <div class="tipo__img reveal from-left"><img src="img/solar.jpg" alt="Energía solar" loading="lazy"></div>
+    <div class="tipo__texto reveal from-right"><h3>Energía solar</h3><p>Proviene de la luz del Sol.</p></div>
+  </article>
+
+  <article class="tipo tipo--inv">
+    <div class="tipo__img reveal from-right"><img src="img/eo.jpg" alt="Energía eólica" loading="lazy"></div>
+    <div class="tipo__texto reveal from-left"><h3>Energía eólica</h3><p>Aprovecha la fuerza del viento.</p></div>
+  </article>
+
+  <article class="tipo">
+    <div class="tipo__img reveal from-left"><img src="img/hidro.jpg" alt="Energía hidroeléctrica" loading="lazy"></div>
+    <div class="tipo__texto reveal from-right"><h3>Energía hidroeléctrica</h3><p>Utiliza el movimiento del agua.</p></div>
+  </article>
+
+  <article class="tipo tipo--inv">
+    <div class="tipo__img reveal from-right"><img src="img/electrica.jpg" alt="Energía eléctrica" loading="lazy"></div>
+    <div class="tipo__texto reveal from-left"><h3>Energía eléctrica</h3><p>Permite que funcionen muchos aparatos.</p></div>
+  </article>
+
+  <article class="tipo">
+    <div class="tipo__img reveal from-left"><img src="img/termica.png" alt="Energía térmica" loading="lazy"></div>
+    <div class="tipo__texto reveal from-right"><h3>Energía térmica</h3><p>Está relacionada con el calor.</p></div>
+  </article>
+</section>
 
     <section class="sec sec--noche" id="renovables">
       <div class="sec__wrap">
@@ -73,30 +96,20 @@
       </div>
     </section>
 
-    <section class="sec sec--indigo" id="ods7">
-      <div class="sec__wrap">
-        <h2 class="reveal from-up">¿Qué es el ODS 7?</h2>
-        <p class="texto reveal from-left">El ODS 7 es uno de los Objetivos de Desarrollo Sostenible de la ONU. Busca garantizar que todas las personas tengan acceso a una energía <strong>asequible, fiable, sostenible y moderna</strong>. También promueve las energías limpias.</p>
-      </div>
-    </section>
+    
   </main>
 
   <footer class="footer" id="registro">
     <div class="footer__inner">
-      <h2>Súmate al cambio</h2>
+      <h2>Participa con nosotros</h2>
       <form id="formRegistro" novalidate>
         <div class="field">
           <label for="nombre">Nombre</label>
           <input type="text" id="nombre" name="nombre" minlength="3" maxlength="25" required autocomplete="off">
-          <small class="hint">Mínimo 3 y máximo 25 caracteres</small>
+          <small class="hint">Mínimo 3 y máximo 25 caracteres (no usar números)</small>
           <small class="error" data-for="nombre"></small>
         </div>
-        <div class="field">
-          <label for="documento">Documento</label>
-          <input type="text" id="documento" name="documento" inputmode="numeric" maxlength="10" required autocomplete="off">
-          <small class="hint">Exactamente 10 dígitos</small>
-          <small class="error" data-for="documento"></small>
-        </div>
+       
         <div class="field">
           <label for="grado">Grado</label>
           <select id="grado" name="grado" required>
@@ -110,12 +123,17 @@
           </select>
           <small class="error" data-for="grado"></small>
         </div>
+
         <div class="field">
-          <label for="telefono">Teléfono</label>
-          <input type="text" id="telefono" name="telefono" inputmode="numeric" maxlength="10" required autocomplete="off">
-          <small class="hint">Exactamente 10 dígitos</small>
-          <small class="error" data-for="telefono"></small>
+          <label for="opinion">¡Comparte tu idea!</label>
+          <textarea id="opinion" name="opinion" rows="4" minlength="10" maxlength="200" required autocomplete="off"></textarea>
+          <small class="hint">Mínimo 10 y máximo 200 caracteres (no usar números)</small>
+          <small class="error" data-for="opinion"></small>
         </div>
+
+
+
+        
         <button type="submit" class="btn btn--submit">Enviar</button>
         <p id="estado" role="status" aria-live="polite"></p>
       </form>
